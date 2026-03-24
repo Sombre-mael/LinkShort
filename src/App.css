@@ -1,0 +1,148 @@
+/* Custom styles for LinkShortener Pro */
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth transitions for all interactive elements */
+button, input, a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* QR Code container hover effect */
+.qr-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for result card */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-card {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Color picker button hover */
+.color-picker-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.color-picker-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text animation */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Toast notification styles */
+[data-sonner-toast] {
+  font-family: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .qr-size-mobile {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .glass-effect {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+/* Button press effect */
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Input placeholder styling */
+input::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.dark input::placeholder {
+  color: #64748b;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: inherit;
+}
