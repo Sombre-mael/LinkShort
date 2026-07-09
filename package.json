@@ -1,7 +1,21 @@
 {
-  "name": "my-app",
+  "name": "linkshort",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Public URL shortener and customizable QR code studio built with React and Vite.",
+  "license": "MIT",
+  "author": "Sombre-mael",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sombre-mael/LinkShort.git"
+  },
+  "keywords": [
+    "url-shortener",
+    "qr-code",
+    "react",
+    "vite",
+    "linkshort"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
