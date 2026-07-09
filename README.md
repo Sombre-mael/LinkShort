@@ -47,6 +47,18 @@ npm run build
 npm run preview
 ```
 
+## Deploiement GitHub Pages
+
+Le projet est configure pour GitHub Pages via GitHub Actions.
+
+Dans les reglages du repo GitHub:
+
+1. Ouvrir `Settings > Pages`.
+2. Mettre `Source` sur `GitHub Actions`.
+3. Pousser sur `main` ou lancer manuellement le workflow `Deploy to GitHub Pages`.
+
+Le workflow installe les dependances, lance le lint, genere `dist`, puis publie uniquement le build Vite.
+
 ## Limites actuelles
 
 - Les liens courts dependent du service externe `is.gd`.
