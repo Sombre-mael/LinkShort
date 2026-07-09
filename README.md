@@ -21,6 +21,8 @@ Le projet est pense pour une utilisation directe: coller un lien, generer un lie
 - Exports PNG en 512, 1024 ou 2048 px et export SVG.
 - Historique local dans le navigateur avec favoris, reprise, copie et suppression.
 - Interface responsive pour mobile et desktop.
+- Installation mobile via PWA.
+- Mention auteur avec lien vers le profil GitHub.
 
 ## Stack
 
@@ -44,6 +46,7 @@ npm run dev
 npm run dev
 npm run lint
 npm run build
+npm run build:pages
 npm run preview
 ```
 
@@ -68,6 +71,8 @@ Pour regenerer ce dossier localement:
 ```bash
 npm run build:pages
 ```
+
+Important: apres une modification du code, relancer `npm run build:pages` avant de pousser si vous utilisez `main /docs`.
 
 ### Option GitHub Actions
 

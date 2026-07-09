@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link2, Sparkles } from 'lucide-react'
+import { ExternalLink, Link2, Sparkles } from 'lucide-react'
 import { toast } from 'sonner'
 import { HistoryPanel } from '@/components/HistoryPanel'
 import { QrStudio } from '@/components/QrStudio'
@@ -163,6 +163,14 @@ function App() {
           onRemove={removeHistoryItem}
           onClear={clearHistory}
         />
+
+        <footer className="app-footer">
+          <span>Projet realise par Sombre-mael.</span>
+          <a href="https://github.com/Sombre-mael" target="_blank" rel="noreferrer">
+            Voir mon profil
+            <ExternalLink aria-hidden="true" />
+          </a>
+        </footer>
       </main>
     </div>
   )

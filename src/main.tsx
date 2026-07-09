@@ -19,3 +19,12 @@ createRoot(document.getElementById('root')!).render(
     />
   </StrictMode>,
 )
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    const swUrl = `${import.meta.env.BASE_URL}sw.js`
+    navigator.serviceWorker.register(swUrl).catch(() => {
+      // The app still works normally if the browser blocks service workers.
+    })
+  })
+}
