@@ -49,13 +49,35 @@ npm run preview
 
 ## Deploiement GitHub Pages
 
-Le projet est configure pour GitHub Pages via GitHub Actions.
+Le projet supporte deux modes GitHub Pages.
+
+### Option recommandee si vous deployez depuis une branche
 
 Dans les reglages du repo GitHub:
 
 1. Ouvrir `Settings > Pages`.
+2. Mettre `Source` sur `Deploy from a branch`.
+3. Choisir la branche `main`.
+4. Choisir le dossier `/docs`.
+5. Sauvegarder.
+
+Le dossier `docs` contient le build statique Vite pret pour GitHub Pages.
+
+Pour regenerer ce dossier localement:
+
+```bash
+npm run build:pages
+```
+
+### Option GitHub Actions
+
+Le repo contient aussi un workflow `Deploy to GitHub Pages`.
+
+Pour l'utiliser:
+
+1. Ouvrir `Settings > Pages`.
 2. Mettre `Source` sur `GitHub Actions`.
-3. Pousser sur `main` ou lancer manuellement le workflow `Deploy to GitHub Pages`.
+3. Pousser sur `main` ou lancer manuellement le workflow.
 
 Le workflow installe les dependances, lance le lint, genere `dist`, puis publie uniquement le build Vite.
 
